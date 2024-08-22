@@ -813,6 +813,32 @@ export const PGMdialogue: DialogueTranslationEntries = {
       1: "Fools with no vision will continue to befoul this beautiful world."
     }
   },
+  "cipher_boss_greevil_1": {
+    "encounter": {
+      1: `The creation of Shadow Pokémon that permanently resist purification. That was the first step. 
+      $Next, I plan to create an army of Shadow Pokémon that work independently on my orders alone.
+      $Let us celebrate the completion of my Shadow Pokémon plan in advance. I will personally see to the destruction of your Pokémon.`
+    },
+    "victory": {
+      1: "How… A mere child… A mere child crushed my cherished plan?"
+    },
+    "defeat": {
+      1: "Hohoho! Return as often as you wish! The more you rebel, the happier my Pokémon become!"
+    }
+  },
+  "cipher_boss_greevil_2": {
+    "encounter": {
+      1: `Let me introduce you to my faithful servant. The one that shall become the central figure in my Shadow Pokémon army.
+      $I present to you Shadow Lugia! This Lugia is the first of the Shadow Pokémon that cannot be purified. 
+      $Now, let us celebrate the completion of my Shadow Pokémon plan in advance! Fall prey to Shadow Lugia!`
+    },
+    "victory": {
+      1: "How dare you, child! How dare you defeat my Shadow Lugia! My one loyal subject! There's nothing left!"
+    },
+    "defeat": {
+      1: "Hohoho! Return as often as you wish! The more you rebel, the happier my Pokémon become!"
+    }
+  },
   "brock": {
     "encounter": {
       1: "My expertise on Rock-type Pokémon will take you down! Come on!",
@@ -1381,6 +1407,18 @@ export const PGMdialogue: DialogueTranslationEntries = {
     },
     "defeat": {
       1: "Heh heh! Don't mind me, just scooping up a W over here. I get it if you're upset, but don't go full Kieran on me, OK?"
+    }
+  },
+  "miror_b": {
+    "encounter": {
+      1: "I can tell you've got some very cute Pokémon with you. Well, they'll all soon be mine! Let the music play! ",
+      2: "Fuhohoho! I'll be showing you my power now. Try not to be blown away by a sense of wow! Let the music play!"
+    },
+    "victory": {
+      1: "I can't keep up with the tempo! Oh, no, no, what a no-no!"
+    },
+    "defeat": {
+      1: "Fuhohoho! I'll beat you as often as you wish!"
     }
   },
   "ramos": {
@@ -2465,6 +2503,19 @@ export const PGMdialogue: DialogueTranslationEntries = {
     },
     "defeat": {
       1: "Things didn't heat up for you."
+    }
+  },
+  "justy": {
+    "encounter": {
+      1: "I don't see any blind spots in your battle style. Shall we have our battle right away?"
+    },
+    "victory": {
+      1: `There’s no shame in this loss!
+                $I’m one lucky guy for being a part of this spectacular battle.`
+    },
+    "defeat": {
+      1: `Honestly, our battle was fantastic.
+                $I will never forget the battle we had!`
     }
   },
   "marnie_elite": {

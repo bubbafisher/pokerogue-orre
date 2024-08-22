@@ -1782,7 +1782,7 @@ export const biomeTrainerPools: BiomeTrainerPools = {
     [BiomePoolTier.RARE]: [],
     [BiomePoolTier.SUPER_RARE]: [],
     [BiomePoolTier.ULTRA_RARE]: [],
-    [BiomePoolTier.BOSS]: [ TrainerType.GORDIE ],
+    [BiomePoolTier.BOSS]: [ TrainerType.GORDIE, TrainerType.JUSTY ],
     [BiomePoolTier.BOSS_RARE]: [],
     [BiomePoolTier.BOSS_SUPER_RARE]: [],
     [BiomePoolTier.BOSS_ULTRA_RARE]: []
@@ -7605,6 +7605,10 @@ export function initBiomes() {
     ],
     [ TrainerType.GRUSHA, [
       [ Biome.ICE_CAVE, BiomePoolTier.BOSS ]
+    ]
+    ],
+    [ TrainerType.JUSTY, [
+      [ Biome.DESERT, BiomePoolTier.BOSS ]
     ]
     ],
     [ TrainerType.LORELEI, [] ],
