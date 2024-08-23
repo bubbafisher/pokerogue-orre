@@ -34,6 +34,9 @@ export const titles: SimpleTranslationEntries = {
   "plasma_admin": "Team Plasma Admin",
   "flare_admin": "Team Flare Admin",
   "flare_admin_female": "Team Flare Admin",
+  "snagem_grunt": "Snagem Grunt",
+  "cipher_admin": "Team Cipher Admin",
+  "cipher_admin_female": "Team Cipher Admin",
   // Maybe if we add the evil teams we can add "Team Rocket" and "Team Aqua" etc. here as well as "Team Rocket Boss" and "Team Aqua Admin" etc.
 } as const;
 
@@ -312,7 +315,12 @@ export const trainerNames: SimpleTranslationEntries = {
   "zinzolin": "Zinzolin",
   "rood": "Rood",
   "xerosic": "Xerosic",
-  "bryony": "Bryony",
+  "agrev": "Agrev",
+  "biden": "Biden",
+  "lovrina": "Lovrina",
+  "Gorigan": "Gorigan",
+  "ardos": "Ardos",
+  "eldes": "Eldes",
 
   "maxie": "Maxie",
   "archie": "Archie",
