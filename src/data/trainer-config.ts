@@ -323,6 +323,12 @@ export class TrainerConfig {
     case TrainerType.LYSANDRE_2:
       trainerType = TrainerType.LYSANDRE;
       break;
+    case TrainerType.GONZAP_2:
+      trainerType = TrainerType.GONZAP;
+      break;
+    case TrainerType.GREEVIL_2:
+      trainerType = TrainerType.GREEVIL;
+      break;
     case TrainerType.MARNIE_ELITE:
       trainerType = TrainerType.MARNIE;
       break;
@@ -584,6 +590,20 @@ export class TrainerConfig {
         [TrainerPoolTier.COMMON]: [Species.FLETCHLING, Species.LITLEO, Species.INKAY, Species.HELIOPTILE, Species.ELECTRIKE, Species.SKRELP, Species.GULPIN, Species.PURRLOIN, Species.POOCHYENA, Species.SCATTERBUG],
         [TrainerPoolTier.UNCOMMON]: [Species.LITWICK, Species.SNEASEL, Species.PANCHAM, Species.PAWNIARD],
         [TrainerPoolTier.RARE]: [Species.NOIVERN, Species.DRUDDIGON]
+      };
+    }
+    case "snagem": {
+      return {
+        [TrainerPoolTier.COMMON]: [Species.ODDISH, Species.ZUBAT, Species.KOFFING, Species.NICKIT, Species.YUNGOOS, Species.HOUNDOUR, Species.MURKROW, Species.NINCADA],
+        [TrainerPoolTier.UNCOMMON]: [Species.TORKOAL, Species.TYROGUE, Species.TEDDIURSA, Species.ABSOL, Species.SEEDOT, Species.MACHOP],
+        [TrainerPoolTier.RARE]: [Species.ONIX, Species.EEVEE]
+      };
+    }
+    case "cipher": {
+      return {
+        [TrainerPoolTier.COMMON]: [Species.TAILLOW, Species.ELEKID, Species.CUBONE, Species.DROWZEE, Species.POLIWAG, Species.STARYU, Species.SKITTY, Species.FARFETCHD, Species.ELECTRIKE, Species.GASTLY, Species.TAUROS],
+        [TrainerPoolTier.UNCOMMON]: [Species.ARON, Species.MANKEY, Species.MIME_JR, Species.SOLROCK, Species.LUNATONE, Species.AERODACTYL, Species.TRAPINCH,],
+        [TrainerPoolTier.RARE]: [Species.BAGON, Species.BELDUM, Species.SNORLAX, Species.SWABLU, Species.LAPRAS]
       };
     }
     }
@@ -1359,14 +1379,21 @@ export const trainerConfigs: TrainerConfigs = {
       [TrainerPoolTier.RARE]: [Species.LITWICK, Species.SNEASEL, Species.PANCHAM, Species.PAWNIARD],
       [TrainerPoolTier.SUPER_RARE]: [Species.NOIVERN, Species.DRUDDIGON]
     }),
-  [TrainerType.SNAGEM_GRUNT]: new TrainerConfig(++t).setHasDouble("Snagem Grunts").setMoneyMultiplier(1.0).setEncounterBgm(TrainerType.SNAGEM_GRUNT).setBattleBgm("battle_plasma_grunt").setMixedBattleBgm("battle_normal_colosseum").setVictoryBgm("victory_team_plasma").setPartyTemplateFunc(scene => getEvilGruntPartyTemplate(scene))
+  [TrainerType.AGREV]: new TrainerConfig(++t).setMoneyMultiplier(1.5).initForEvilTeamAdmin("snagem_grunt", "snagem", [Species.MUDKIP]).setEncounterBgm(TrainerType.PLASMA_GRUNT).setBattleBgm("battle_plasma_grunt").setMixedBattleBgm("battle_normal_colosseum").setVictoryBgm("victory_team_plasma").setPartyTemplateFunc(scene => getEvilGruntPartyTemplate(scene)),
+  [TrainerType.BIDEN]: new TrainerConfig(++t).setMoneyMultiplier(1.5).initForEvilTeamAdmin("snagem_grunt", "snagem", [Species.SMEARGLE]).setEncounterBgm(TrainerType.PLASMA_GRUNT).setBattleBgm("battle_plasma_grunt").setMixedBattleBgm("battle_normal_colosseum").setVictoryBgm("victory_team_plasma").setPartyTemplateFunc(scene => getEvilGruntPartyTemplate(scene)),
+  [TrainerType.SNAGEM_GRUNT]: new TrainerConfig(++t).setHasDouble("Snagem Grunts").setMoneyMultiplier(1.0).setEncounterBgm(TrainerType.PLASMA_GRUNT).setBattleBgm("battle_plasma_grunt").setMixedBattleBgm("battle_normal_colosseum").setVictoryBgm("victory_team_plasma").setPartyTemplateFunc(scene => getEvilGruntPartyTemplate(scene))
     .setSpeciesPools({
       [TrainerPoolTier.COMMON]: [ Species.ODDISH, Species.ZUBAT, Species.WURMPLE, Species.MACHOP, Species.RHYHORN, Species.KOFFING, Species.WINGULL],
       [TrainerPoolTier.UNCOMMON]: [Species.DELIBIRD, Species.PINECO, Species.NICKIT, Species.GULPIN, Species.PURRLOIN, Species.NINJASK, Species.REMORAID],
       [TrainerPoolTier.RARE]: [Species.SMEARGLE, Species.SNEASEL, Species.AIPOM, Species.SEEDOT],
       [TrainerPoolTier.SUPER_RARE]: [Species.TREECKO, Species.ONIX]
     }),
-  [TrainerType.CIPHER_PEON]: new TrainerConfig(++t).setHasGenders("Cipher Peon Female").setHasDouble("Cipher Peons").setMoneyMultiplier(1.0).setEncounterBgm(TrainerType.CIPHER_PEON).setBattleBgm("battle_plasma_grunt").setMixedBattleBgm("battle_cipher_peon").setVictoryBgm("victory_team_plasma").setPartyTemplateFunc(scene => getEvilGruntPartyTemplate(scene))
+  [TrainerType.ARDOS]: new TrainerConfig(++t).setMoneyMultiplier(1.5).initForEvilTeamAdmin("cipher_admin", "cipher", [Species.CHARMANDER]).setEncounterBgm(TrainerType.PLASMA_GRUNT).setBattleBgm("battle_plasma_grunt").setMixedBattleBgm("battle_cipher_admin_xd").setVictoryBgm("victory_team_plasma")./*setHasDouble("ardos_eldes_double").setDoubleTrainerType(TrainerType.ELDES).setDoubleTitle("cipher_admin_double").*/setPartyTemplateFunc(scene => getEvilGruntPartyTemplate(scene)),
+  [TrainerType.ELDES]: new TrainerConfig(++t).setMoneyMultiplier(1.5).initForEvilTeamAdmin("cipher_admin", "cipher", [Species.SNIVY]).setEncounterBgm(TrainerType.PLASMA_GRUNT).setBattleBgm("battle_plasma_grunt").setMixedBattleBgm("battle_cipher_admin_xd").setVictoryBgm("victory_team_plasma")./*setHasDouble("ardos_eldes_double").setDoubleTrainerType(TrainerType.ARDOS).setDoubleTitle("cipher_admin_double").*/setPartyTemplateFunc(scene => getEvilGruntPartyTemplate(scene)),
+  [TrainerType.GORIGAN]: new TrainerConfig(++t).setMoneyMultiplier(1.5).initForEvilTeamAdmin("cipher_admin", "cipher", [Species.ARON]).setEncounterBgm(TrainerType.PLASMA_GRUNT).setBattleBgm("battle_plasma_grunt").setMixedBattleBgm("battle_cipher_admin_xd").setVictoryBgm("victory_team_plasma").setPartyTemplateFunc(scene => getEvilGruntPartyTemplate(scene)),
+  [TrainerType.SNATTLE]: new TrainerConfig(++t).setMoneyMultiplier(1.5).initForEvilTeamAdmin("cipher_admin", "cipher", [Species.CASTFORM]).setEncounterBgm(TrainerType.PLASMA_GRUNT).setBattleBgm("battle_plasma_grunt").setMixedBattleBgm("battle_cipher_admin_xd").setVictoryBgm("victory_team_plasma").setPartyTemplateFunc(scene => getEvilGruntPartyTemplate(scene)),
+  [TrainerType.LOVRINA]: new TrainerConfig(++t).setMoneyMultiplier(1.5).initForEvilTeamAdmin("cipher_admin", "cipher", [Species.BUDEW]).setEncounterBgm(TrainerType.PLASMA_GRUNT).setBattleBgm("battle_plasma_grunt").setMixedBattleBgm("battle_cipher_admin_xd").setVictoryBgm("victory_team_plasma").setPartyTemplateFunc(scene => getEvilGruntPartyTemplate(scene)),
+  [TrainerType.CIPHER_PEON]: new TrainerConfig(++t).setHasGenders("Cipher Peon Female").setHasDouble("Cipher Peons").setMoneyMultiplier(1.0).setEncounterBgm(TrainerType.PLASMA_GRUNT).setBattleBgm("battle_plasma_grunt").setMixedBattleBgm("battle_cipher_peon").setVictoryBgm("victory_team_plasma").setPartyTemplateFunc(scene => getEvilGruntPartyTemplate(scene))
     .setSpeciesPools({
       [TrainerPoolTier.COMMON]: [ Species.POOCHYENA, Species.SPINARAK, Species.GRIMER, Species.GEODUDE, Species.SPOINK, Species.ELECTRIKE, Species.CACNEA, Species.BUDEW],
       [TrainerPoolTier.UNCOMMON]: [Species.VOLBEAT, Species.ILLUMISE, Species.SURSKIT, Species.SHUPPET, Species.YANMA, Species.PURRLOIN, Species.CLAMPERL, Species.GULPIN],
