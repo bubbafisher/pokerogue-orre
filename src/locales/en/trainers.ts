@@ -318,7 +318,7 @@ export const trainerNames: SimpleTranslationEntries = {
   "agrev": "Agrev",
   "biden": "Biden",
   "lovrina": "Lovrina",
-  "Gorigan": "Gorigan",
+  "gorigan": "Gorigan",
   "ardos": "Ardos",
   "eldes": "Eldes",
 
