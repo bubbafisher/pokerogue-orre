@@ -1138,9 +1138,9 @@ export const signatureSpecies: SignatureSpecies = {
   LACEY: [Species.EXCADRILL, Species.PRIMARINA, [Species.ALCREMIE, Species.GRANBULL], Species.WHIMSICOTT],
   DRAYTON: [Species.DRAGONITE, Species.ARCHALUDON, Species.HAXORUS, Species.SCEPTILE],
   MIROR_B: [Species.LUDICOLO, Species.LUDICOLO, Species.LUDICOLO, Species.LUDICOLO],
-  DAKIM: [Species.ENTEI, [Species.SWAMPERT, Species.WHISCASH], [Species.METAGROSS, Species.CLAYDOL], [Species.CAMERUPT, Species.HOUNDOOM]],
-  VENUS: [Species.SUICUNE, [Species.DELCATTY, Species.WIGGLYTUFF, Species.BLISSEY], [Species.BANETTE, Species.MISMAGIUS, Species.DUSKNOIR], [Species.VILEPLUME, Species.BELLOSSOM, Species.MEGANIUM]],
-  EIN: [Species.RAIKOU, Species.PELIPPER, Species.CROBAT, [Species.LANTURN, Species.RHYDON, Species.STARMIE]],
+  DAKIM: [Species.ENTEI, Species.METANG, Species.FORRETRESS, Species.SOLROCK],
+  VENUS: [Species.SUICUNE, Species.STEELIX, Species.VILEPLUME, Species.BLISSEY],
+  EIN: [Species.RAIKOU, Species.ALTARIA, Species.PELIPPER, Species.RHYDON],
   BLUE: [[Species.GYARADOS, Species.EXEGGUTOR, Species.ARCANINE], Species.HO_OH, [Species.RHYPERIOR, Species.MAGNEZONE]], // Alakazam lead, Mega Pidgeot
   RED: [Species.LUGIA, Species.SNORLAX, [Species.ESPEON, Species.UMBREON, Species.SYLVEON]], // GMax Pikachu lead, Mega gen 1 starter
   LANCE_CHAMPION: [Species.DRAGONITE, Species.KINGDRA, Species.ALOLA_EXEGGUTOR], // Aerodactyl lead, Mega Latias/Latios
@@ -1155,8 +1155,8 @@ export const signatureSpecies: SignatureSpecies = {
   GEETA: [Species.MIRAIDON, [Species.ESPATHRA, Species.VELUZA], [Species.AVALUGG, Species.HISUI_AVALUGG], Species.KINGAMBIT], // Glimmora lead
   NEMONA: [Species.KORAIDON, Species.PAWMOT, [Species.DUDUNSPARCE, Species.ORTHWORM], [Species.MEOWSCARADA, Species.SKELEDIRGE, Species.QUAQUAVAL]], // Lycanroc lead
   KIERAN: [[Species.GRIMMSNARL, Species.INCINEROAR, Species.PORYGON_Z], Species.OGERPON, Species.TERAPAGOS, Species.HYDRAPPLE], // Poliwrath/Politoed lead
-  NASCOUR: [Species.DEOXYS, Species.BLAZIKEN, Species.ARCTOVISH, Species.HISUI_BRAVIARY], // Flutter Mane Lead, Mega Metagross
-  EVICE: [[Species.SCIZOR, Species.AGGRON], Species.SALAMENCE, Species.SLAKING, Species.HO_OH], // Slowking Lead, Mega Tyranitar
+  NASCOUR: [Species.GARDEVOIR, Species.BLAZIKEN, Species.WALREIN, Species.DEOXYS], // Flutter Mane Lead, Mega Metagross
+  EVICE: [[Species.SCIZOR, Species.AGGRON], Species.SALAMENCE, Species.MACHAMP, Species.HO_OH], // Slowking Lead, Mega Tyranitar
 };
 
 export const trainerConfigs: TrainerConfigs = {
@@ -1521,10 +1521,10 @@ export const trainerConfigs: TrainerConfigs = {
   [TrainerType.AMARYS]: new TrainerConfig(++t).initForEliteFour(signatureSpecies["AMARYS"], false, Type.STEEL).setMixedBattleBgm("battle_bb_elite"),
   [TrainerType.LACEY]: new TrainerConfig(++t).initForEliteFour(signatureSpecies["LACEY"], false, Type.FAIRY).setMixedBattleBgm("battle_bb_elite"),
   [TrainerType.DRAYTON]: new TrainerConfig(++t).initForEliteFour(signatureSpecies["DRAYTON"], true, Type.DRAGON).setMixedBattleBgm("battle_bb_elite"),
-  [TrainerType.MIROR_B]: new TrainerConfig(++t).initForEliteFour(signatureSpecies["MIROR_B"],true, Type.GRASS).setMixedBattleBgm("battle_miror_b"),
+  [TrainerType.MIROR_B]: new TrainerConfig(++t).initForEliteFour(signatureSpecies["MIROR_B"],true, Type.WATER).setMixedBattleBgm("battle_miror_b"),
   [TrainerType.DAKIM]: new TrainerConfig(++t).initForEliteFour(signatureSpecies["DAKIM"],true, Type.GROUND).setMixedBattleBgm("battle_cipher_admin_col"),
   [TrainerType.VENUS]: new TrainerConfig(++t).initForEliteFour(signatureSpecies["VENUS"],true, Type.FAIRY).setMixedBattleBgm("battle_cipher_admin_col"),
-  [TrainerType.EIN]: new TrainerConfig(++t).initForEliteFour(signatureSpecies["EIN"],true, Type.ELECTRIC).setMixedBattleBgm("battle_cipher_admin_col"),
+  [TrainerType.EIN]: new TrainerConfig(++t).initForEliteFour(signatureSpecies["EIN"],true, Type.POISON).setMixedBattleBgm("battle_cipher_admin_col"),
 
   [TrainerType.BLUE]: new TrainerConfig((t = TrainerType.BLUE)).initForChampion(signatureSpecies["BLUE"], true).setBattleBgm("battle_kanto_champion").setMixedBattleBgm("battle_kanto_champion").setHasDouble("blue_red_double").setDoubleTrainerType(TrainerType.RED).setDoubleTitle("champion_double")
     .setPartyMemberFunc(0, getRandomPartyMemberFunc([Species.ALAKAZAM], TrainerSlot.TRAINER, true, p => {
@@ -1630,7 +1630,7 @@ export const trainerConfigs: TrainerConfigs = {
     .setPartyMemberFunc(0, getRandomPartyMemberFunc([Species.POLIWRATH, Species.POLITOED], TrainerSlot.TRAINER, true, p => {
       p.generateAndPopulateMoveset();
     })),
-  [TrainerType.NASCOUR]: new TrainerConfig(++t).initForChampion(signatureSpecies["NASCOUR"],true).setBattleBgm("battle_nascour").setMixedBattleBgm("battle_nascour")
+  [TrainerType.NASCOUR]: new TrainerConfig(++t).initForChampion(signatureSpecies["NASCOUR"],true).setBattleBgm("battle_hoenn_champion").setMixedBattleBgm("battle_cipher_boss")
     .setPartyMemberFunc(0, getRandomPartyMemberFunc([Species.FLUTTER_MANE], TrainerSlot.TRAINER, true, p => {
       p.generateAndPopulateMoveset();
     }))
