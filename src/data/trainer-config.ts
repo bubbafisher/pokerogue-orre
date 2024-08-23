@@ -1936,9 +1936,9 @@ export const trainerConfigs: TrainerConfigs = {
   [TrainerType.GONZAP]: new TrainerConfig(++t).setName("Gonzap").initForEvilTeamLeader("Snagem Boss",[]).setMixedBattleBgm("battle_cipher_admin_xd").setVictoryBgm("victory_team_plasma")
     .setPartyMemberFunc(0, getRandomPartyMemberFunc([ Species.CRAWDAUNT ]))
     .setPartyMemberFunc(1, getRandomPartyMemberFunc([ Species.SHIFTRY, Species.BRELOOM, Species.VILEPLUME ]))
-    .setPartyMemberFunc(2, getRandomPartyMemberFunc([ Species.ARMALDO, Species.PINSIR ]))
+    .setPartyMemberFunc(2, getRandomPartyMemberFunc([ Species.MACHAMP ]))
     .setPartyMemberFunc(3, getRandomPartyMemberFunc([ Species.GYARADOS, Species.SALAMENCE ]))
-    .setPartyMemberFunc(4, getRandomPartyMemberFunc([ Species.MACHAMP ], TrainerSlot.TRAINER, true, p => {
+    .setPartyMemberFunc(4, getRandomPartyMemberFunc([ Species.PINSIR ], TrainerSlot.TRAINER, true, p => {
       p.generateAndPopulateMoveset();
       p.pokeball = PokeballType.ULTRA_BALL;
       p.formIndex = 1;
@@ -1953,7 +1953,7 @@ export const trainerConfigs: TrainerConfigs = {
     .setPartyMemberFunc(0, getRandomPartyMemberFunc([ Species.HARIYAMA, Species.IRON_HANDS ]))
     .setPartyMemberFunc(1, getRandomPartyMemberFunc([ Species.WHISCASH ]))
     .setPartyMemberFunc(2, getRandomPartyMemberFunc([ Species.BLASTOISE, Species.CHARIZARD, Species.VENUSAUR ]))
-    .setPartyMemberFunc(3, getRandomPartyMemberFunc([ Species.MACHAMP ], TrainerSlot.TRAINER, true, p => {
+    .setPartyMemberFunc(3, getRandomPartyMemberFunc([ Species.PINSIR ], TrainerSlot.TRAINER, true, p => {
       p.generateAndPopulateMoveset();
       p.pokeball = PokeballType.ULTRA_BALL;
       p.formIndex = 1;
